@@ -1,5 +1,6 @@
 package com.example.Project.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.Hibernate;
@@ -18,18 +19,18 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "postId", nullable = false)
     private Integer postId;
-
     @OneToMany(mappedBy = "post", orphanRemoval = true)
     private Set<Question> questions = new LinkedHashSet<>();
 
     @Column(name = "review")
     private String review;
+    private String type;
+    private String name;
 
     @Column(name = "text")
     private String text;
-    @Lob
-    private byte[] postPicture;
-
+    @Column(name = "image", unique = false, nullable = false, length = 100000)
+    private byte[] image;
     @Column(name = "status")
     private Boolean status;
 
