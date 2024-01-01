@@ -2,7 +2,6 @@ package com.example.Project.entities;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,14 +11,13 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@ToString
 @Table(name = "account")
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "accountId", nullable = false)
-    private long accountId;
-    @ToString.Exclude
+    private Integer accountId;
+
     @OneToMany(mappedBy = "account", orphanRemoval = true)
     private Set<CreditDemand> creditDemands = new LinkedHashSet<>();
 
@@ -32,9 +30,5 @@ public class Account {
 
     @Column(name = "rib")
     private String rib;
-
-
-    @OneToMany(mappedBy = "account", orphanRemoval = true)
-    private Set<Transaction> transactions = new LinkedHashSet<>();
 
 }

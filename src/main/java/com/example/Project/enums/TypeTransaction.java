@@ -5,8 +5,5 @@ public enum TypeTransaction {
     Deposit,
     loanPayment,
     Acquisition,
-    assetSale,
-
-    Buy,
-    Sell
+    assetSale
 }
