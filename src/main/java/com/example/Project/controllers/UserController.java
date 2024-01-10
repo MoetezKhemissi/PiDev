@@ -4,7 +4,7 @@ import com.example.Project.entities.User;
 import com.example.Project.entities.UserCode;
 import com.example.Project.entities.VerificationToken;
 import com.example.Project.Repositories.UserRepository;
-import com.example.Project.Services.*;
+import com.example.Project.services.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

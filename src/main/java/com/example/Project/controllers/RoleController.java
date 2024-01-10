@@ -2,7 +2,7 @@ package com.example.Project.controllers;
 
 
 import com.example.Project.entities.Role;
-import com.example.Project.Services.RoleService;
+import com.example.Project.services.RoleService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

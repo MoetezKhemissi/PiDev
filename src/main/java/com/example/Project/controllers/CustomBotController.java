@@ -28,6 +28,8 @@ public class CustomBotController {
         ChatGPTRequest request = new ChatGPTRequest(model, prompt);
         ChatGptResponse chatGptResponse = template.postForObject(apiURL, request, ChatGptResponse.class);
         System.out.println(prompt);
-        return chatGptResponse.getChoices().get(0).getMessage().getContent();
+        /*TODO Sou fix this shit throwing error*/
+        return "chat is not working currently check the code to see why this was commented out";
+        /*return chatGptResponse.getChoices().get(0).getMessage().getContent();*/
     }
 }

@@ -1,6 +1,6 @@
-package com.example.Project.Services;
+package com.example.Project.services;
 
-import com.example.Project.Config.JwtUtil;
+import com.example.Project.config.JwtUtil;
 import com.example.Project.DTO.JwtRequest;
 import com.example.Project.DTO.JwtResponse;
 import com.example.Project.entities.User;

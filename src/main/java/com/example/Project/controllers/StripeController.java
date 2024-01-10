@@ -1,6 +1,6 @@
 package com.example.Project.controllers;
 import com.example.Project.DTO.PaymentIntentDto;
-import com.example.Project.Services.PaymentService;
+import com.example.Project.services.PaymentService;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
 import org.springframework.beans.factory.annotation.Autowired;

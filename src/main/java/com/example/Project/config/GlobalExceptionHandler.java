@@ -1,6 +1,6 @@
-package com.example.Project.Config;
+package com.example.Project.config;
 
-import com.example.Project.Services.JwtService;
+import com.example.Project.services.JwtService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

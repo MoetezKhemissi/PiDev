@@ -1,9 +1,9 @@
-package com.example.Project.Config;
+package com.example.Project.config;
 
 
 
 
-import com.example.Project.Services.JwtService;
+import com.example.Project.services.JwtService;
 import io.jsonwebtoken.ExpiredJwtException;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

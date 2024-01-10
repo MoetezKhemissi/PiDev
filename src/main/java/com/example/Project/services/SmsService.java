@@ -1,6 +1,6 @@
-package com.example.Project.Services;
+package com.example.Project.services;
 
-import com.example.Project.Config.TwilioConfig;
+import com.example.Project.config.TwilioConfig;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;

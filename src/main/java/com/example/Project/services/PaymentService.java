@@ -1,4 +1,4 @@
-package com.example.Project.Services;
+package com.example.Project.services;
 
 import com.example.Project.DTO.PaymentIntentDto;
 import com.stripe.Stripe;

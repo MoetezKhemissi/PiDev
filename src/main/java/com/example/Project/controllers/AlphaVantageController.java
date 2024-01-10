@@ -1,6 +1,6 @@
 package com.example.Project.controllers;
 
-import com.example.Project.Services.AlphaVantageService;
+import com.example.Project.services.AlphaVantageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.example.Project.Config;
+package com.example.Project.config;
 
 import com.example.Project.Repositories.UserRepository;
 import com.example.Project.entities.User;

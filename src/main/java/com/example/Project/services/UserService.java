@@ -1,4 +1,4 @@
-package com.example.Project.Services;
+package com.example.Project.services;
 
 import com.example.Project.entities.*;
 import com.example.Project.Interfaces.IUserService;

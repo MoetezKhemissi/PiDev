@@ -4,7 +4,7 @@ package com.example.Project.controllers;
 import com.example.Project.entities.User;
 import com.example.Project.entities.Wallet;
 import com.example.Project.Repositories.UserRepository;
-import com.example.Project.Services.WalletService;
+import com.example.Project.services.WalletService;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Card;

@@ -1,4 +1,4 @@
-package com.example.Project.Services;
+package com.example.Project.services;
 
 import com.example.Project.entities.User;
 import com.example.Project.entities.Wallet;

@@ -2,7 +2,7 @@ package com.example.Project.controllers;
 
 
 import com.example.Project.DTO.JwtRequest;
-import com.example.Project.Services.JwtService;
+import com.example.Project.services.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;

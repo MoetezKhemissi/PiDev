@@ -1,6 +1,6 @@
 package com.example.Project.controllers;
 
-import com.example.Project.Services.RiskManagementService;
+import com.example.Project.services.RiskManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
