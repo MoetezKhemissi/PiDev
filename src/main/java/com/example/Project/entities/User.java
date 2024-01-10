@@ -1,28 +1,43 @@
 package com.example.Project.entities;
 
 import com.example.Project.enums.RoleUser;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
+import java.util.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "user")
-public class User {
+public class User implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "UserId", nullable = false)
+    private Long IdUser;
+
+
     @OneToMany(mappedBy = "user", orphanRemoval = true)
     private Set<Campaigns> campaigns = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "user", orphanRemoval = true)
     private Set<Post> posts = new LinkedHashSet<>();
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "UserId", nullable = false)
-    private Integer UserId;
 
     @Column(name = "last_name")
     private String lastName;
@@ -45,9 +60,8 @@ public class User {
     @Column(name = "status")
     private Boolean status;
 
-    @Column(name = "phonenum")
-    private String phonenum;
-
+    @Column(name = "phone")
+    private Long Phone;
     @Column(name = "email")
     private String email;
 
@@ -55,10 +69,30 @@ public class User {
     private String userJob;
 
     @Column(name = "user_pwd")
-    private String userPwd;
+    private String password;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "role_user")
-    private RoleUser roleUser;
+    @NotBlank(message = "Username is required")
+    @Size(max = 20)
+    @NotNull
+    private String  Username;
 
+    private Integer IsVerified;
+    private String verificationToken;
+    private String verificationCode;
+    private Integer Age;
+    private Date BirthDate;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "Users_Role",
+            joinColumns = @JoinColumn(name = "iduser"),
+            inverseJoinColumns = @JoinColumn(name = "idRole"))
+
+    private Set<Role> Roles;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Wallet wallet;
 }
+
+

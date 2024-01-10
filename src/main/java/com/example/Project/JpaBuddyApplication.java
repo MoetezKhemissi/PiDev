@@ -13,11 +13,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 public class JpaBuddyApplication {
 
-    private static ApplicationContext applicationContext;
+private static ApplicationContext applicationContext;
     public static void main(String[] args) {
         SpringApplication.run(JpaBuddyApplication.class, args);
     }
-    public static void displayAllBeans() {
+public static void displayAllBeans() {
         String[] allBeanNames = applicationContext.getBeanDefinitionNames();
         for(String beanName : allBeanNames) {
             System.out.println(beanName);

@@ -19,7 +19,7 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "accountId", nullable = false)
     private long accountId;
-    @ToString.Exclude
+@ToString.Exclude
     @OneToMany(mappedBy = "account", orphanRemoval = true)
     private Set<CreditDemand> creditDemands = new LinkedHashSet<>();
 
