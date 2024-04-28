@@ -1,9 +1,14 @@
-# Probability of Ruin
+# XTrading
 
-This project aims to evaluate the probability of ruin in an insurance company by modeling claims and their costs. Various distributions are used to model claim costs, including negative binomial, exponential, and log-normal distributions. Monte Carlo simulations are used to estimate the extreme quantiles of the total claim costs.
+XTrading is a sophisticated real-time trading platform developed to meet the demands of modern traders. Key features include a FIFO order matching system and dynamic price updates.
 
-For more detailed information, please refer to the scientific article: [Link to Scientific Article](https://cv-bucket-moetez.s3.eu-central-1.amazonaws.com/Projet+Math.pdf)
+## Key Features:
+- Development of a real-time trading platform with a FIFO order matching system and dynamic price updates.
+- Integration of advanced technical indicators to provide users with crucial market information, facilitating informed trading decisions.
 
-## Technologies Used
-- R
-- Python
+## Technologies Used:
+- Java
+- Spring
+- Angular
+- Apache Kafka
+- TypeScript
